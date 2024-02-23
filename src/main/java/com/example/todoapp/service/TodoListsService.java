@@ -1,7 +1,7 @@
-package com.example.ToDoApp.service;
+package com.example.todoapp.service;
 
-import com.example.ToDoApp.entity.TodoList;
-import com.example.ToDoApp.repository.TodoListsRepository;
+import com.example.todoapp.entity.TodoList;
+import com.example.todoapp.repository.TodoListsRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
