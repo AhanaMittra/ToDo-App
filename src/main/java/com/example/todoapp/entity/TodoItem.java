@@ -1,4 +1,4 @@
-package com.example.ToDoApp.entity;
+package com.example.todoapp.entity;
 
 import jakarta.persistence.*;
 
@@ -17,23 +17,23 @@ public class TodoItem {
 
     private String content;
 
-    private boolean is_completed;
+    private boolean isCompleted;
 
-    private Date created_at;
+    private Date createdAt;
 
-    private Date updated_at;
+    private Date updatedAt;
 
     public TodoItem(){
 
     }
 
-    public TodoItem(int id, TodoList todolist, String content, boolean is_completed, Date created_at, Date updated_at) {
+    public TodoItem(int id, TodoList todolist, String content, boolean isCompleted, Date createdAt, Date updatedAt) {
         this.id = id;
         this.todoList = todolist;
         this.content = content;
-        this.is_completed = is_completed;
-        this.created_at = created_at;
-        this.updated_at = updated_at;
+        this.isCompleted = isCompleted;
+        this.createdAt = createdAt;
+        this.updatedAt = updatedAt;
     }
 
     public int getId() {
@@ -60,28 +60,28 @@ public class TodoItem {
         this.content = content;
     }
 
-    public boolean isIs_completed() {
-        return is_completed;
+    public boolean isCompleted() {
+        return isCompleted;
     }
 
-    public void setIs_completed(boolean is_completed) {
-        this.is_completed = is_completed;
+    public void setCompleted(boolean completed) {
+        this.isCompleted = completed;
     }
 
-    public Date getCreated_at() {
-        return created_at;
+    public Date getCreatedAt() {
+        return createdAt;
     }
 
-    public void setCreated_at(Date created_at) {
-        this.created_at = created_at;
+    public void setCreatedAt(Date createdAt) {
+        this.createdAt = createdAt;
     }
 
-    public Date getUpdated_at() {
-        return updated_at;
+    public Date getUpdatedAt() {
+        return updatedAt;
     }
 
-    public void setUpdated_at(Date updated_at) {
-        this.updated_at = updated_at;
+    public void setUpdatedAt(Date updatedAt) {
+        this.updatedAt = updatedAt;
     }
 
     @Override
@@ -90,9 +90,9 @@ public class TodoItem {
                 "id=" + id +
                 ", todolist=" + todoList +
                 ", content='" + content + '\'' +
-                ", is_completed=" + is_completed +
-                ", created_at=" + created_at +
-                ", updated_at=" + updated_at +
+                ", is_completed=" + isCompleted +
+                ", created_at=" + createdAt +
+                ", updated_at=" + updatedAt +
                 '}';
     }
 }

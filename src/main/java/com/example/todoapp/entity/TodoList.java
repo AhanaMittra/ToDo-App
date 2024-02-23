@@ -1,7 +1,6 @@
-package com.example.ToDoApp.entity;
+package com.example.todoapp.entity;
 
 import jakarta.persistence.*;
-import org.hibernate.annotations.Cascade;
 
 import java.util.Date;
 import java.util.List;
@@ -16,21 +15,21 @@ public class TodoList {
 
     private String description;
 
-    private Date created_at;
+    private Date createdAt;
 
-    private Date updated_at;
+    private Date updatedAt;
 
     @OneToMany(mappedBy = "todoList",cascade = CascadeType.ALL)
 //    @Cascade({ CascadeType.ALL, org.hibernate.annotations.CascadeType.DELETE_ORPHAN })orphanRemoval = true
     private List<TodoItem> todoItem;
 
     public TodoList(){}
-    public TodoList(int id, String name, String description, Date created_at, Date updated_at) {
+    public TodoList(int id, String name, String description, Date createdAt, Date updatedAt) {
         this.id = id;
         this.name = name;
         this.description = description;
-        this.created_at = created_at;
-        this.updated_at = updated_at;
+        this.createdAt = createdAt;
+        this.updatedAt = updatedAt;
     }
 
     public int getId() {
@@ -57,20 +56,20 @@ public class TodoList {
         this.description = description;
     }
 
-    public Date getCreated_at() {
-        return created_at;
+    public Date getCreatedAt() {
+        return createdAt;
     }
 
-    public void setCreated_at(Date created_at) {
-        this.created_at = created_at;
+    public void setCreatedAt(Date createdAt) {
+        this.createdAt = createdAt;
     }
 
-    public Date getUpdated_at() {
-        return updated_at;
+    public Date getUpdatedAt() {
+        return updatedAt;
     }
 
-    public void setUpdated_at(Date updated_at) {
-        this.updated_at = updated_at;
+    public void setUpdatedAt(Date updatedAt) {
+        this.updatedAt = updatedAt;
     }
 
     @Override
@@ -79,8 +78,8 @@ public class TodoList {
                 "id=" + id +
                 ", name='" + name + '\'' +
                 ", description='" + description + '\'' +
-                ", created_at=" + created_at +
-                ", updated_at=" + updated_at +
+                ", created_at=" + createdAt +
+                ", updated_at=" + updatedAt +
                 '}';
     }
 }
